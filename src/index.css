@@ -122,11 +122,11 @@ button {
   .app {
     width: 300px;
 
-    margin: 30px auto;
+    /* margin: 30px auto; */
   }
   .main-box {
     /* height: 450px; */
-    margin-bottom: -50px;
+    /* margin-bottom: -50px; */
   }
   input {
     width: 250px;
