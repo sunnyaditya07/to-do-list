@@ -140,7 +140,7 @@ button:active {
   text-align: left;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .app {
     margin: 8vh auto;
   }
