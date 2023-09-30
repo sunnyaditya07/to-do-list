@@ -30,7 +30,7 @@ function ToDoForm() {
   return (
     <div className="main-box">
       <form onSubmit={handleSubmit}>
-        <p className="heading">What's on your mind Today!</p>
+        <p className="heading">What's on your mind Yesterday!</p>
         <div className="input-box">
           <input
             type="text"
