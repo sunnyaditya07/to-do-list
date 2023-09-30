@@ -10,7 +10,8 @@ body {
   background-color: #3f72af;
 }
 .app {
-  margin: 100px auto;
+  margin: 15vh auto;
+  /* margin-top: 15vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,12 +142,10 @@ button:active {
 
 @media screen and (max-width: 400px) {
   app {
-    height: auto;
-    margin: 3rem auto;
+    margin: 10rem auto;
   }
   .main-box {
     max-width: 21.8rem;
-
     height: 34.37rem;
     /* margin-bottom: -50px; */
   }
