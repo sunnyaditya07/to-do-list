@@ -8,16 +8,17 @@
 body {
   font-family: "Rubik", sans-serif;
   background-color: #3f72af;
+}
+.app {
+  margin: 100px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.app {
-  max-width: 450px;
-  margin: 100px auto;
-}
 
 .main-box {
+  max-width: 28.2rem;
+
   /* border: 3px solid red; */
 
   background-color: #dbe2ef;
@@ -140,15 +141,13 @@ button:active {
 }
 
 @media screen and (max-width: 400px) {
-  .app {
-    /* max-width: 350px; */
-
-    margin: 50px auto;
+  app {
+    height: auto;
   }
   .main-box {
-    max-width: 350px;
+    max-width: 21.8rem;
 
-    height: 550px;
+    height: 34.37rem;
     /* margin-bottom: -50px; */
   }
 
