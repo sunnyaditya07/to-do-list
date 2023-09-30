@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 .app {
-  width: 450px;
+  max-width: 450px;
   margin: 100px auto;
 }
 
@@ -128,9 +128,7 @@ button:active {
   border: none;
   outline: none;
 }
-.checkbox:hover,
-.checkbox:active {
-}
+
 .item-btn {
   display: flex;
 
@@ -145,12 +143,13 @@ button:active {
   .app {
     width: 350px;
 
-    margin: 50px auto;
+    /* margin: 50px auto; */
   }
   .main-box {
     height: 550px;
     /* margin-bottom: -50px; */
   }
+
   input {
     width: 240px;
   }
