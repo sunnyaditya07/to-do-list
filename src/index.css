@@ -141,11 +141,13 @@ button:active {
 
 @media screen and (max-width: 400px) {
   .app {
-    width: 350px;
+    /* max-width: 350px; */
 
-    /* margin: 50px auto; */
+    margin: 50px auto;
   }
   .main-box {
+    max-width: 350px;
+
     height: 550px;
     /* margin-bottom: -50px; */
   }
