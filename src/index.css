@@ -43,25 +43,30 @@ body {
   /* border: 4px solid pink; */
   padding: 0px 40px;
   margin-top: 10px;
-  position: relative;
+  /* position: relative; */
+  display: flex;
   margin-bottom: 30px;
 }
 input {
-  width: 350px;
+  width: 270px;
   height: 40px;
   border: none;
   outline: none;
   font-size: 16px;
   background-color: #f9f7f7;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+
   padding-left: 18px;
+  padding-right: 10px;
 }
 .item-text {
   color: #dbe2ef;
 }
 button {
-  position: absolute;
-  right: 40px;
+  /* position: absolute; */
+  /* right: 40px; */
   width: 80px;
   height: 40px;
   border: none;
@@ -71,6 +76,11 @@ button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover,
+button:active {
+  background-color: #325b8c;
 }
 .edit-btn,
 .delete-btn {
@@ -96,7 +106,7 @@ button {
   text-align: center;
   /* align-items: flex-start; */
   overflow-y: scroll;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .item {
   display: flex;
@@ -105,13 +115,26 @@ button {
   /* height: 40px; */
   margin-left: 25px;
   background-color: #3f72af;
-  /* border: 3px solid royalblue; */
+
   border-radius: 5px;
   margin-bottom: 10px;
 }
+.item:last-child {
+  margin-bottom: 0px;
+}
+.checkbox {
+  width: 20px;
+  accent-color: #141f2f;
+  border: none;
+  outline: none;
+}
+.checkbox:hover,
+.checkbox:active {
+}
 .item-btn {
   display: flex;
-  gap: 40px;
+
+  gap: 15px;
 }
 .item-text {
   padding: 10px;
@@ -120,19 +143,26 @@ button {
 
 @media screen and (max-width: 400px) {
   .app {
-    width: 300px;
+    width: 350px;
 
-    /* margin: 30px auto; */
+    margin: 50px auto;
   }
   .main-box {
-    /* height: 450px; */
+    height: 550px;
     /* margin-bottom: -50px; */
   }
   input {
-    width: 250px;
+    width: 240px;
+  }
+  .list-item {
   }
   .item {
-    width: 250px;
-    margin-left: 75px;
+    width: 320px;
+    margin-left: 40px;
+  }
+  .edit-btn,
+  .delete-btn,
+  .checkbox {
+    width: 15px;
   }
 }

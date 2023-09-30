@@ -5,7 +5,7 @@ function WishList({ item, onDeleteItems, id }) {
     <div className="item">
       <p className="item-text">{item}</p>
       <div className="item-btn">
-        {/* <input type="radio" className="radio-checkbox" /> */}
+        <input type="checkbox" className="checkbox" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
