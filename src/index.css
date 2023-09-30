@@ -11,7 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-top: 100px;
+  /* min-height: 100vh; */
 }
 
 .main-box {
@@ -138,6 +139,9 @@ button:active {
 }
 
 @media screen and (max-width: 425px) {
+  body {
+    margin-top: 50px;
+  }
   .main-box {
     /* width: 21.8rem; */
     width: 350px;
