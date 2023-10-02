@@ -158,10 +158,15 @@ button:active {
 
 @media screen and (max-width: 425px) {
   .main-box {
+    border: 3px solid red;
     /* width: 21.8rem; */
+    /* margin-top: -50%;
+    margin-bottom: -50%; */
+
     width: 350px;
     height: 550px;
     /* margin-bottom: -50px; */
+    margin-left: 0;
   }
 
   input {
@@ -176,7 +181,10 @@ button:active {
   .edit-btn,
   .delete-btn,
   .checkbox {
-    width: 15px;
+    width: 18px;
+  }
+  .edit-btn {
+    margin-left: -5px;
   }
   .edit-input {
     width: 100%;
