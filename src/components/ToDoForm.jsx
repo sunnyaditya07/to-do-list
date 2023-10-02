@@ -5,6 +5,7 @@ import WishList from "./WishList";
 function ToDoForm() {
   const [items, setItems] = useState(function () {
     const storedItems = localStorage.getItem("items");
+
     return JSON.parse(storedItems) ?? [];
   });
   const [value, setValue] = useState("");
@@ -57,6 +58,10 @@ function ToDoForm() {
     },
     [items]
   );
+
+  useEffect(function () {
+    setItems((items) => items.map((item) => ({ ...item, isEditing: false })));
+  }, []);
   return (
     <div className="main-box">
       <form onSubmit={handleSubmit}>

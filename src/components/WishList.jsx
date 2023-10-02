@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FunctionsButton from "./FunctionsButton";
 
 function WishList({
@@ -10,22 +10,21 @@ function WishList({
   onToggleChecked,
   onEdit,
 }) {
-  console.log(edit);
   const [updateItem, setUpdateItem] = useState(itemName);
   const [toEdit, setToEdit] = useState(edit);
 
-  // function handleUpdate() {
-  //   setToEdit(!toEdit);
-  // }
   function handleSaveUpdate() {
     if (updateItem === "") onDeleteItems(id);
     onEdit(id, updateItem);
   }
 
+  useEffect(function () {
+    setToEdit(false);
+  }, []);
+
   return (
-    // <div className="list-item">
     <div className="item">
-      <p
+      <div
         className="item-text checked"
         style={
           packed
@@ -50,7 +49,7 @@ function WishList({
         ) : (
           itemName
         )}
-      </p>
+      </div>
       {!toEdit && (
         <FunctionsButton
           packed={packed}
@@ -65,7 +64,6 @@ function WishList({
         />
       )}
     </div>
-    // </div>
   );
 }
 
