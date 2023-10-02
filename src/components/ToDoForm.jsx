@@ -5,18 +5,13 @@ import WishList from "./WishList";
 function ToDoForm() {
   const [items, setItems] = useState(function () {
     const storedItems = localStorage.getItem("items");
-    return JSON.parse(storedItems);
+    return JSON.parse(storedItems) ?? [];
   });
   const [value, setValue] = useState("");
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
   }
-  useEffect(
-    function () {
-      localStorage.setItem("items", JSON.stringify(items));
-    },
-    [items]
-  );
+
   function handleDeletItems(id) {
     setItems((items) => items.filter((item) => item.id !== id));
   }
@@ -44,7 +39,7 @@ function ToDoForm() {
   }
   function handleEdit(id, updateItem) {
     setItems((items) =>
-      items.map((item) =>
+      items?.map((item) =>
         item.id === id
           ? {
               ...item,
@@ -56,6 +51,12 @@ function ToDoForm() {
     );
   }
 
+  useEffect(
+    function () {
+      localStorage.setItem("items", JSON.stringify(items));
+    },
+    [items]
+  );
   return (
     <div className="main-box">
       <form onSubmit={handleSubmit}>
