@@ -13,7 +13,8 @@ function WishList({
   const [updateItem, setUpdateItem] = useState(itemName);
   const [toEdit, setToEdit] = useState(edit);
 
-  function handleSaveUpdate() {
+  function handleSaveUpdate(e) {
+    e.preventDefault();
     if (updateItem === "") onDeleteItems(id);
     onEdit(id, updateItem);
   }
